@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Inter-Regular";
+    src: url("./fonts/Inter-Regular.ttf")
+}
+
+html {
+    font-family: "Inter-Regular";
+}
