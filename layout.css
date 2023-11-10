@@ -19,3 +19,15 @@ h1 {
 .label > input {
     margin-right: 5px;
 }
+
+.form-campus {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.input-label{
+    display: flex;
+    justify-content: space-between;
+    margin: .5em 0 ;
+}

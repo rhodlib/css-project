@@ -108,3 +108,25 @@ input[type="radio"]::before{
 input[type="radio"]:checked::before {
     transform: scale(1);
 }
+
+input[type="password"]{
+    input-security: disc;
+    letter-spacing: 0.125em;
+    color: var(--color-one);
+}
+
+button {
+    color: var(--color-two);
+    background-color: var(--color-one);
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    border: 3px solid var(--color-two);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-two);
+    color: var(--color-one);
+    transition: 100ms background-color ease-in-out;
+    transition: 100ms color ease-in-out;
+}
