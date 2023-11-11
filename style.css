@@ -61,7 +61,7 @@ hr {
     border-color: var(--color-two);
 }
 
-input {
+input, textarea {
     background-color: var(--color-two);
     padding: 0.5em;
     border: none;
@@ -69,12 +69,12 @@ input {
     color: var(--color-one);
 }
 
-input:hover {
+input:hover, textarea:hover {
     background-color: oklch(95% 0.1 300 / 75%);
     transition: 120ms background-color ease-in-out;
 }
 
-input:focus{
+input:focus, textarea:focus{
     outline: max(2px, 0.15em) solid var(--color-two);
     outline-offset: max(2px, 0.15em);
 }
@@ -110,7 +110,6 @@ input[type="radio"]:checked::before {
 }
 
 input[type="password"]{
-    input-security: disc;
     letter-spacing: 0.125em;
     color: var(--color-one);
 }
@@ -122,6 +121,7 @@ button {
     border-radius: 3px;
     border: 3px solid var(--color-two);
     cursor: pointer;
+    font-weight: bold;
 }
 
 button:hover {
@@ -129,4 +129,29 @@ button:hover {
     color: var(--color-one);
     transition: 100ms background-color ease-in-out;
     transition: 100ms color ease-in-out;
+}
+
+textarea {
+    font-family: "Inter-Regular";
+    padding: 1em;
+}
+
+textarea::placeholder, input::placeholder {
+    color: var(--color-one);
+    opacity: 0.8;
+}
+
+ul li, ol li {
+    margin-left: 1em;
+}
+
+input:disabled {
+    opacity: 0.6;
+}
+
+pre {
+    background-color: var(--color-two);
+    padding: 1em;
+    border-radius: 3px;
+    color: var(--color-one);
 }
