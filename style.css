@@ -62,6 +62,15 @@ hr {
     border-color: var(--color-two);
 }
 
+label {
+    display: flex;
+    align-items: center;
+}
+
+label > input[type="checkbox"] {
+    margin-right: 4px;
+}
+
 input, textarea {
     background-color: var(--color-two);
     padding: 0.5em;
@@ -94,6 +103,28 @@ input[type="radio"]{
     place-content: center;
 }
 
+input[type="checkbox"]{
+    appearance: none;
+    background-color: currentColor;
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    color: currentColor;
+    border: 0.15 solid currentColor;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before{
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 100ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--color-one);
+    background-color: CanvasContext;
+}
 
 input[type="radio"]::before{
     content: "";
@@ -106,7 +137,7 @@ input[type="radio"]::before{
     background-color: CanvasContext;
 }
 
-input[type="radio"]:checked::before {
+input[type="radio"]:checked::before, input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
 
@@ -158,15 +189,15 @@ pre {
 }
 
 table {
-    border: 1px solid var(--color-two);
-    padding: 0.5em;
-    border-radius: 3px;
+    border-color: var(--color-two);
 }
 
-th, td {
-    padding: 0.3em;
+thead tr {
+    background-color: var(--color-one);
 }
 
-thead > tr {
-    outline: 1px solid var(--color-two);
+td, th {
+    padding: 0.2em;
+    vertical-align: top;
+    word-wrap: break-word;
 }
